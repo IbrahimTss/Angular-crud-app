@@ -1,0 +1,60 @@
+<h1 mat-dialog-title>{{dialogtitle}}</h1>
+<div mat-dialog-content>
+    <form [formGroup]="productForm">
+        
+
+        <mat-form-field appearance="outline">
+            <mat-label>Product Name</mat-label>
+            <input matInput formControlName="Productname" placeholder="Name">
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline">
+            <mat-label>Product Category</mat-label>
+            <mat-select formControlName="Category" placeholder="category">
+                <mat-option value="Fruit">Fruits</mat-option>
+                <mat-option value="Veggies">Veggies</mat-option>
+                <mat-option value="Electronics">Electronics</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline">
+            <mat-label>Choose a date</mat-label>
+            <input matInput formControlName="Date" [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+
+        <label>Select Freshness</label>
+        <mat-radio-group formControlName="Freshness" class="example-radio-group">
+            <mat-radio-button class="example-radio-button" *ngFor="let fresh of freshi" [value]="fresh">{{fresh}}
+            </mat-radio-button>
+        </mat-radio-group>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Price</mat-label>
+            <input matInput formControlName="Price" type="number" placeholder="Price">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Comments</mat-label>
+            <textarea formControlName="Comments" matInput placeholder="Products Comments"></textarea>
+        </mat-form-field>
+
+        <!-- <mat-form-field appearance="outline">
+            <mat-label>Image</mat-label>
+            <input matInput formControlName="Image" type="file" placeholder="Image" accept="image/*"
+            (change)="processFile(imageInput)">
+        </mat-form-field> -->
+        
+        
+       
+
+    </form>
+    <div mat-dialog-action [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <button style="margin-left: 5px;" mat-raised-button color="primary" (click)="addProd()">{{activeBtn}}</button>
+    </div>
+</div>

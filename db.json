@@ -1,0 +1,40 @@
+{
+  "Productlists": [
+    {
+      "Productname": "Banana",
+      "Category": "Fruit",
+      "Freshness": "New Brand",
+      "Price": 100,
+      "Comments": "Fresh Fruits",
+      "Date": "2022-03-24T04:00:00.000Z",
+      "id": 1
+    },
+    {
+      "Productname": "green apple",
+      "Category": "Fruit",
+      "Freshness": "New Brand",
+      "Price": 120,
+      "Comments": "Fresh",
+      "Date": "2022-03-24T04:00:00.000Z",
+      "id": 2
+    },
+    {
+      "Productname": "potato",
+      "Category": "Veggies",
+      "Freshness": "Seconds",
+      "Price": 12,
+      "Comments": "Old veggies",
+      "Date": "2022-03-24T04:00:00.000Z",
+      "id": 4
+    },
+    {
+      "Productname": "Samsung s10",
+      "Category": "Electronics",
+      "Freshness": "New Brand",
+      "Price": 15999,
+      "Comments": "Unsealed mobile",
+      "Date": "2022-03-24T04:00:00.000Z",
+      "id": 5
+    }
+  ]
+}
